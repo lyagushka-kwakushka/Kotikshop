@@ -2,6 +2,7 @@ package com.example.kotikshop;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -110,18 +111,24 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     public void addToCart(View view) {
+        userNameEditText = findViewById(R.id.editTextTextPersonName);
         Order order = new Order();
-        order.userName=userNameEditText.getText().toString();
-        Log.d("printUserName", order.userName);
+        order.userName = userNameEditText.getText().toString();
 
         order.goodsName = tovarname;
-        Log.d("goodsName", order.goodsName);
 
         order.quantity = kolichestvo;
-        Log.d("quantity", ""+order.quantity);
 
         order.orderPrice = kolichestvo * c;
-        Log.d("orderPrice", ""+order.orderPrice);
+
+        Intent orderIntent = new Intent(MainActivity.this, OrderActivity.class);
+        orderIntent.putExtra("userName",order.userName);
+        orderIntent.putExtra("goodsName",order.goodsName);
+        orderIntent.putExtra("quantity",order.quantity);
+        orderIntent.putExtra("orderPrice",order.orderPrice);
+
+        startActivity(orderIntent);
+
 
     }
 }
