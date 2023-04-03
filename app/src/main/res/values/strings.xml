@@ -1,4 +1,5 @@
 <resources>
     <string name="spinnertext1">Выберите товар</string>
     <string name="app_name">kotikishop</string>
+    <string name="emailbutton">Кнопька</string>
 </resources>

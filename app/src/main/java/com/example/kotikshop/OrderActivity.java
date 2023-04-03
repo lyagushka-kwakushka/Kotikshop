@@ -7,7 +7,8 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class OrderActivity extends AppCompatActivity {
-
+    String[] addresses = {" allakhverdovyuriy@gmail.com "};
+    String subject = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
