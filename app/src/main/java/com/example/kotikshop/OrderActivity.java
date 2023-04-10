@@ -19,7 +19,7 @@ public class OrderActivity extends AppCompatActivity {
         Intent recievedOrderIntent = getIntent();
         String userName = recievedOrderIntent.getStringExtra("userName");
         String goodsName = recievedOrderIntent.getStringExtra("goodsName");
-        int quantity = recievedOrderIntent.getIntExtra("quantity",0);
+        int quantity = recievedOrderIntent.getIntExtra("kolichestvo",0);
         double price = recievedOrderIntent.getDoubleExtra("price",0);
         double orderPrice = recievedOrderIntent.getDoubleExtra("orderPrice",0);
 
