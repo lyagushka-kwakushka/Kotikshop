@@ -14,6 +14,7 @@
 
     <Button
         android:id="@+id/button4"
+        android:onClick="submitOrder"
         android:layout_width="match_parent"
         android:layout_height="109dp"
         android:layout_below="@id/orderTextView"
